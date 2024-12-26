@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package chatcompletion;
+
+message ChatCompletionRequest {
+    string name = 1;
+}
+
+message ChatCompletionResponse {
+    string message = 1;
+}
+
+service ChatCompletionService {
+    rpc ChatCompletion(ChatCompletionRequest) returns (ChatCompletionResponse);
+}
